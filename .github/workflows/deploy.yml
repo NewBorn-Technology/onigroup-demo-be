@@ -1,0 +1,43 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy to VM
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Pull latest code
+            cd ~/backend || git clone https://github.com/NewBorn-Technology/onigroup-demo-be.git ~/backend
+            cd ~/backend
+            git pull origin main
+
+            # Install & build
+            npm ci --production=false
+            npm run build
+
+            # Restart with pm2
+            pm2 delete backend 2>/dev/null || true
+            pm2 start dist/main.js --name backend
+            pm2 save

@@ -54,3 +54,11 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Graphify — commit graphify-out/ for shared agent context; keep local/runtime files out
+graphify-out/cost.json
+graphify-out/memory/
+graphify-out/cache/
+graphify-out/.rebuild.lock
+graphify-out/.graphify_python
+graphify-out/.graphify_root

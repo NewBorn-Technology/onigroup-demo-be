@@ -1,0 +1,367 @@
+{
+  "communities": {
+    "0": [
+      "body",
+      "controller",
+      "get",
+      "injectable",
+      "post",
+      "query",
+      "src_deliveries_deliveries_controller",
+      "src_deliveries_deliveries_controller_deliveriescontroller",
+      "src_deliveries_deliveries_controller_deliveriescontroller_constructor",
+      "src_deliveries_deliveries_controller_deliveriescontroller_getdeliveries",
+      "src_deliveries_deliveries_controller_deliveriescontroller_optimizefleet",
+      "src_deliveries_deliveries_controller_deliveriescontroller_optimizeroute",
+      "src_deliveries_deliveries_controller_deliveriescontroller_searchplaces",
+      "src_deliveries_deliveries_controller_deliveriescontroller_validateaddress",
+      "src_deliveries_deliveries_module",
+      "src_deliveries_deliveries_service",
+      "src_deliveries_deliveries_service_deliveriesservice",
+      "src_deliveries_deliveries_service_deliveriesservice_constructor",
+      "src_deliveries_deliveries_service_deliveriesservice_getdeliveries",
+      "src_deliveries_deliveries_service_deliveriesservice_optimizefleet",
+      "src_deliveries_deliveries_service_deliveriesservice_optimizeroute",
+      "src_deliveries_deliveries_service_deliveriesservice_searchplaces",
+      "src_deliveries_deliveries_service_deliveriesservice_validateaddress",
+      "src_deliveries_deliveries_service_deliverystop",
+      "src_deliveries_dto_optimize_route_dto",
+      "src_deliveries_dto_optimize_route_dto_optimizeroutedto"
+    ],
+    "1": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowsyntheticdefaultimports",
+      "tsconfig_compileroptions_baseurl",
+      "tsconfig_compileroptions_declaration",
+      "tsconfig_compileroptions_emitdecoratormetadata",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_experimentaldecorators",
+      "tsconfig_compileroptions_forceconsistentcasinginfilenames",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_nofallthroughcasesinswitch",
+      "tsconfig_compileroptions_noimplicitany",
+      "tsconfig_compileroptions_outdir",
+      "tsconfig_compileroptions_removecomments",
+      "tsconfig_compileroptions_resolvepackagejsonexports",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_sourcemap",
+      "tsconfig_compileroptions_strictbindcallapply",
+      "tsconfig_compileroptions_strictnullchecks",
+      "tsconfig_compileroptions_target"
+    ],
+    "2": [
+      "package",
+      "package_author",
+      "package_description",
+      "package_jest",
+      "package_jest_collectcoveragefrom",
+      "package_jest_coveragedirectory",
+      "package_jest_modulefileextensions",
+      "package_jest_rootdir",
+      "package_jest_testenvironment",
+      "package_jest_testregex",
+      "package_jest_transform",
+      "package_license",
+      "package_name",
+      "package_private",
+      "package_transform_t_j_s",
+      "package_version",
+      "ref_js",
+      "ref_json",
+      "ref_t_j_s",
+      "ref_ts"
+    ],
+    "3": [
+      "axios",
+      "nestjs_axios",
+      "nestjs_common",
+      "nestjs_config",
+      "nestjs_core",
+      "nestjs_platform_express",
+      "package_dependencies",
+      "package_dependencies_axios",
+      "package_dependencies_nestjs_axios",
+      "package_dependencies_nestjs_common",
+      "package_dependencies_nestjs_config",
+      "package_dependencies_nestjs_core",
+      "package_dependencies_nestjs_platform_express",
+      "package_dependencies_reflect_metadata",
+      "package_dependencies_rxjs",
+      "reflect_metadata",
+      "rxjs"
+    ],
+    "4": [
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_format",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_scripts_start_debug",
+      "package_scripts_start_dev",
+      "package_scripts_start_prod",
+      "package_scripts_test",
+      "package_scripts_test_cov",
+      "package_scripts_test_debug",
+      "package_scripts_test_e2e",
+      "package_scripts_test_watch"
+    ],
+    "5": [
+      "ref_dist",
+      "ref_node_modules",
+      "ref_spec_ts",
+      "ref_test",
+      "ref_tsconfig_json",
+      "tsconfig_build",
+      "tsconfig_build_exclude",
+      "tsconfig_build_extends"
+    ],
+    "6": [
+      "src_app_module",
+      "src_app_module_appmodule",
+      "src_app_module_ts_module",
+      "src_deliveries_deliveries_module_deliveriesmodule",
+      "src_deliveries_deliveries_module_ts_module",
+      "src_main",
+      "src_main_bootstrap",
+      "test_app_e2e_spec"
+    ],
+    "7": [
+      "eslint",
+      "jest",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_jest",
+      "package_devdependencies_types_node",
+      "types_node"
+    ],
+    "8": [
+      "nest_cli",
+      "nest_cli_collection",
+      "nest_cli_compileroptions",
+      "nest_cli_compileroptions_deleteoutdir",
+      "nest_cli_schema",
+      "nest_cli_sourceroot"
+    ],
+    "9": [
+      "eslint_config_prettier",
+      "package_devdependencies_eslint_config_prettier"
+    ],
+    "10": [
+      "eslint_eslintrc",
+      "package_devdependencies_eslint_eslintrc"
+    ],
+    "11": [
+      "eslint_js",
+      "package_devdependencies_eslint_js"
+    ],
+    "12": [
+      "eslint_plugin_prettier",
+      "package_devdependencies_eslint_plugin_prettier"
+    ],
+    "13": [
+      "globals",
+      "package_devdependencies_globals"
+    ],
+    "14": [
+      "nestjs_cli",
+      "package_devdependencies_nestjs_cli"
+    ],
+    "15": [
+      "nestjs_schematics",
+      "package_devdependencies_nestjs_schematics"
+    ],
+    "16": [
+      "nestjs_testing",
+      "package_devdependencies_nestjs_testing"
+    ],
+    "17": [
+      "package_devdependencies_prettier",
+      "prettier"
+    ],
+    "18": [
+      "package_devdependencies_source_map_support",
+      "source_map_support"
+    ],
+    "19": [
+      "package_devdependencies_supertest",
+      "supertest"
+    ],
+    "20": [
+      "package_devdependencies_ts_jest",
+      "ts_jest"
+    ],
+    "21": [
+      "package_devdependencies_ts_loader",
+      "ts_loader"
+    ],
+    "22": [
+      "package_devdependencies_ts_node",
+      "ts_node"
+    ],
+    "23": [
+      "package_devdependencies_tsconfig_paths",
+      "tsconfig_paths"
+    ],
+    "24": [
+      "package_devdependencies_types_express",
+      "types_express"
+    ],
+    "25": [
+      "package_devdependencies_types_jest",
+      "types_jest"
+    ],
+    "26": [
+      "package_devdependencies_types_supertest",
+      "types_supertest"
+    ],
+    "27": [
+      "package_devdependencies_typescript",
+      "typescript"
+    ],
+    "28": [
+      "package_devdependencies_typescript_eslint",
+      "typescript_eslint"
+    ],
+    "29": [
+      "eslint_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.13538461538461538,
+    "1": 0.08695652173913043,
+    "2": 0.1,
+    "3": 0.11764705882352941,
+    "4": 0.15384615384615385,
+    "5": 0.25,
+    "6": 0.35714285714285715,
+    "7": 0.2857142857142857,
+    "8": 0.3333333333333333,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 22
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 13
+    },
+    {
+      "id": "src_deliveries_deliveries_service_deliveriesservice",
+      "label": "DeliveriesService",
+      "degree": 11
+    },
+    {
+      "id": "src_deliveries_deliveries_controller_deliveriescontroller",
+      "label": "DeliveriesController",
+      "degree": 9
+    },
+    {
+      "id": "package_jest",
+      "label": "jest",
+      "degree": 8
+    },
+    {
+      "id": "src_app_module_appmodule",
+      "label": "AppModule",
+      "degree": 5
+    },
+    {
+      "id": "src_deliveries_dto_optimize_route_dto_optimizeroutedto",
+      "label": "OptimizeRouteDto",
+      "degree": 5
+    },
+    {
+      "id": "tsconfig_build_exclude",
+      "label": "exclude",
+      "degree": 5
+    },
+    {
+      "id": "package_jest_modulefileextensions",
+      "label": "moduleFileExtensions",
+      "degree": 4
+    },
+    {
+      "id": "src_deliveries_deliveries_module_deliveriesmodule",
+      "label": "DeliveriesModule",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "bootstrap()",
+      "target": "AppModule",
+      "source_files": [
+        "src/main.ts",
+        "src/app.module.ts"
+      ],
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source; peripheral node `bootstrap()` unexpectedly reaches hub `AppModule`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 7` to `Community 2`, `Community 9`, `Community 10`, `Community 11`, `Community 12`, `Community 13`, `Community 14`, `Community 15`, `Community 16`, `Community 17`, `Community 18`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 24`, `Community 25`, `Community 26`, `Community 27`, `Community 28`?",
+      "why": "High betweenness centrality (0.236) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `Community 3` to `Community 2`?",
+      "why": "High betweenness centrality (0.099) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `scripts` connect `Community 4` to `Community 2`?",
+      "why": "High betweenness centrality (0.077) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `$schema`, `collection`, `sourceRoot` to the rest of the system?",
+      "why": "90 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13538461538461538 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+name: Regenerate Graphify graph
+
+# Keeps committed graphify-out/ in sync for shared agent context.
+# Path filters intentionally omit graphify-out/** so bot commits cannot loop.
+# Skip manually with [skip graphify] in the commit message.
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'test/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'yarn.lock'
+      - 'pnpm-lock.yaml'
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - '.agents/**'
+      - '.claude/skills/graphify/**'
+      - '.codex/skills/graphify/**'
+      - '.cursor/rules/graphify.mdc'
+      - '.github/workflows/graphify.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: graphify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (
+        github.event.head_commit != null &&
+        !contains(github.event.head_commit.message, '[skip graphify]')
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install graphifyy
+        run: |
+          uv tool install graphifyy
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Extract + cluster (AST only, no LLM)
+        env:
+          PYTHONHASHSEED: '0'
+        run: |
+          set -uo pipefail
+          graphify --version || true
+          graphify extract . --code-only
+          graphify cluster-only . --no-label
+
+      - name: Upload graphify-out artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: graphify-out-${{ github.sha }}
+          path: |
+            graphify-out/graph.json
+            graphify-out/GRAPH_REPORT.md
+            graphify-out/graph.html
+            graphify-out/manifest.json
+            graphify-out/.graphify_analysis.json
+            graphify-out/.graphify_labels.json
+            graphify-out/.graphify_labels.json.sig
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Commit updated graphify-out (if changed)
+        env:
+          GRAPHIFY_BOT_NAME: github-actions[bot]
+          GRAPHIFY_BOT_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          set -uo pipefail
+
+          git config user.name "$GRAPHIFY_BOT_NAME"
+          git config user.email "$GRAPHIFY_BOT_EMAIL"
+
+          git add -- \
+            graphify-out/graph.json \
+            graphify-out/GRAPH_REPORT.md \
+            graphify-out/graph.html \
+            graphify-out/manifest.json \
+            graphify-out/.graphify_analysis.json \
+            graphify-out/.graphify_labels.json \
+            graphify-out/.graphify_labels.json.sig \
+            || true
+
+          if git diff --cached --quiet; then
+            echo "No graphify-out changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore(graphify): regenerate knowledge graph [skip graphify]"
+
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
